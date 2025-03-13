@@ -31,7 +31,7 @@ const Appointments = () => {
 
     return (
         <div className="flex flex-col lg:flex-row gap-4">
-            <section className="mx-auto w-full dark:bg-gray-900 p-2 rounded">
+            <section className="mx-auto w-full dark:bg-gray-950 p-2 rounded">
                 <form onSubmit={saveData} className="flex flex-col gap-6">
                     <h2 className="font-bold text-lg">Create appointment:</h2>
                     <div className="dark:bg-gray-800 dark:text-gray-100 p-2 rounded flex flex-col gap-2">
@@ -69,18 +69,18 @@ const Appointments = () => {
                     </div>
                     <button
                         type="submit"
-                        className="ml-auto grow-0 dark:bg-pink-500 dark:hover:bg-pink-400 dark:text-black rounded p-2 font-bold text-lg">Add Appointment</button>
+                        className="shadow shadow-pink-600 ml-auto grow-0 dark:bg-pink-500 dark:hover:bg-pink-400 dark:text-black rounded p-2 font-bold text-lg">Add Appointment</button>
                 </form>
             </section>
 
-            <section className="mx-auto w-full dark:bg-gray-900 p-2 rounded flex flex-col gap-6">
+            <section className="mx-auto w-full dark:bg-gray-950 p-2 rounded flex flex-col gap-6">
                 <h2 className="font-bold text-lg">My Appointments:</h2>
                 { !appointments.length && (
-                    <div className="dark:bg-pink-800 dark:text-pink-300 p-2 rounded">Add your first appointment using the form above!</div>
+                    <div className="dark:bg-pink-800 dark:text-pink-300 p-2 rounded">No appointments added yet.</div>
                 )}
                 {appointments && (<ul className="flex flex-col gap-1">
                     {appointments.map(a => (
-                        <li key={a.id} className="dark:bg-gray-800 p-2 rounded">
+                        <li key={a.id} className="dark:bg-gray-950 p-2 rounded">
                             <div className="flex justify-between items-center">
                                 <span>{a.title}</span>
                                 <span>{a.date}</span>
