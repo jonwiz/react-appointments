@@ -1,22 +1,21 @@
-import { createRoot } from "react-dom/client";
-import Appointments from "./appointments";
-import "./index.css";
+import "./App.css";
 import { StrictMode } from "react";
 import { CONFIG } from "./CONFIG";
+import Main from "./appointments/Main";
 
 const App = () => {
 
     return (
         <StrictMode>
             <div className="font-mono">
-                <header className="dark:bg-pink-950 bg-gradient-to-r from-pink-950 to-pink-900 p-2">
+                <header className="bg-gradient-to-r from-black to-gray-950 p-2">
                     <div className="container mx-auto py-8 px-2 md:px-0">
                         <h1 className="text-4xl text-pink-400 font-bold">My Appointments</h1>
                     </div>
                 </header>
                 <main>
                     <div className="container mx-auto py-8 px-2 md:px-0">
-                        <Appointments />
+                        <Main />
                     </div>
                 </main>
 
@@ -31,4 +30,4 @@ const App = () => {
 }
 
 
-createRoot(document.getElementById('root')!).render(<App />);
+export default App;
